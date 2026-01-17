@@ -3,10 +3,10 @@ package myvin
 import (
 	"strings"
 
-	"github.com/yudeguang/stringsx"
+	"github.com/yudeguang17/stringsx"
 )
 
-//获取公告型号,去除汉字等字符
+// 获取公告型号,去除汉字等字符
 func FmtGonggaoNo(gonggaoNo string) string {
 	lastHAN := 0
 	r := []rune(gonggaoNo)
@@ -21,7 +21,7 @@ func FmtGonggaoNo(gonggaoNo string) string {
 	return string(r[lastHAN:])
 }
 
-//获取公告型号,去除汉字等字符
+// 获取公告型号,去除汉字等字符
 func FmtGonggaoNoPlus(gonggaoNo string) string {
 	a := strings.ToUpper(gonggaoNo)
 	a = strings.Replace(a, ` `, ``, -1)

@@ -1,0 +1,8 @@
+github.com/antlabs/strsim v0.0.4 h1:E8/5gVm7lCTiEnYVHMEnPIcRwF1TU16ZyEp2Cythivg=
+github.com/antlabs/strsim v0.0.4/go.mod h1:s/cj/yhn/zlO9ZEJusKnEj67ifmhXlFbYrqHxjFPpak=
+github.com/yudeguang17/iox v0.0.0-20260117121340-2a3f79471ee2 h1:x3efbIKp7gcqFtsJDlMTjuQ61cLUj+XrvckX4wOo9q8=
+github.com/yudeguang17/iox v0.0.0-20260117121340-2a3f79471ee2/go.mod h1:nh2yiyRZ3Nq0lwbYsaRsV+wnw9Hje+PRi4h/c8Sc3wA=
+github.com/yudeguang17/stringsx v0.0.0-20260117124003-2bf8b293381e h1:WnkZVCk9Su+/n2xfAZ8qwk48dzvNVAXkez0EC1/UU9w=
+github.com/yudeguang17/stringsx v0.0.0-20260117124003-2bf8b293381e/go.mod h1:RAGamQggSKV9U6TrnbYV4CwJFBOtlye2K5eDMwP4o6Q=
+golang.org/x/text v0.33.0 h1:B3njUFyqtHDUI5jMn1YIr5B0IE2U0qck04r6d4KPAxE=
+golang.org/x/text v0.33.0/go.mod h1:LuMebE6+rBincTi9+xWTY8TztLzKHc/9C1uBCG27+q8=

@@ -1,7 +1,7 @@
 package myvin
 
 import (
-	"github.com/yudeguang/stringsx"
+	"github.com/yudeguang17/stringsx"
 	"strconv"
 	"strings"
 )
@@ -105,7 +105,7 @@ func IsVinLegal(vin string) bool {
 	return vin9Int == total%11
 }
 
-//VIN码第9位转换成数字
+// VIN码第9位转换成数字
 func vin9ToInt(vin9 string) int {
 	switch vin9 {
 	case "0":
@@ -135,7 +135,7 @@ func vin9ToInt(vin9 string) int {
 	}
 }
 
-//除第9位之外的其它位转换为数字
+// 除第9位之外的其它位转换为数字
 func vinToInt(vinStr string) int {
 	switch vinStr {
 	case "a":
@@ -212,7 +212,7 @@ func vinToInt(vinStr string) int {
 	}
 }
 
-//判断最后6位是不是数字,是数字就合法
+// 判断最后6位是不是数字,是数字就合法
 func IsVinLast6Legal(vin string) bool {
 	vinLast6 := stringsx.Right(vin, 6)
 	if len(vinLast6) != 6 {
@@ -225,7 +225,7 @@ func IsVinLast6Legal(vin string) bool {
 	return true
 }
 
-//判断最后5位是不是数字,是数字就合法
+// 判断最后5位是不是数字,是数字就合法
 func IsVinLast5Legal(vin string) bool {
 	vinLast5 := stringsx.Right(vin, 5)
 	if len(vinLast5) != 5 {
@@ -238,7 +238,7 @@ func IsVinLast5Legal(vin string) bool {
 	return true
 }
 
-//判断最后4位是不是数字,是数字就合法
+// 判断最后4位是不是数字,是数字就合法
 func IsVinLast4Legal(vin string) bool {
 	vinLast4 := stringsx.Right(vin, 4)
 	if len(vinLast4) != 4 {

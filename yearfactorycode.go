@@ -137,6 +137,7 @@ func GetFactoryCodeFromVin(vin string) string {
 func GetVin8YearCodeFactoryCodeVinlast6(vin string) (vin8, yearCode, factoryCode, vinLast6 string, err error) {
 	if len(vin) != 17 {
 		err = fmt.Errorf("vin必须是17位")
+		return 
 	}
 	vin8 = vin[0:8]
 	yearCode = vin[9:10]

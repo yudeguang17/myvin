@@ -2,13 +2,13 @@ package myvin
 
 import (
 	"fmt"
-	"github.com/yudeguang/stringsx"
+	"github.com/yudeguang17/stringsx"
 	"sort"
 	"strconv"
 	"strings"
 )
 
-//根据VIN样本伪随机生成VIN码，规则为从尾数0开始每隔N个数字产生一个VIN码,every必须大于等于1小于999999
+// 根据VIN样本伪随机生成VIN码，规则为从尾数0开始每隔N个数字产生一个VIN码,every必须大于等于1小于999999
 func GetVinsByRandFrom(vin string, every int) []string {
 	vins := make([]string, 0, 999999/every)
 	if every < 1 || every > 999999 {
@@ -32,7 +32,7 @@ func GetVinsByRandFrom(vin string, every int) []string {
 	return vins
 }
 
-//根据样本VIN码生成与之最为接近的N个VIN码
+// 根据样本VIN码生成与之最为接近的N个VIN码
 func GetClosestVinsFrom(vin string, num int) []string {
 	vins := make([]string, 0, num)
 	if len(vin) != 17 {
@@ -59,7 +59,7 @@ func GetClosestVinsFrom(vin string, num int) []string {
 	return vins
 }
 
-//根据样本VIN码生成与之最为接近的N个VIN码,第9位为非校校位的情况
+// 根据样本VIN码生成与之最为接近的N个VIN码,第9位为非校校位的情况
 func GetClosestVinsNotFitForCheckRuleFrom(vin string, num int) []string {
 	vins := make([]string, 0, num)
 	if len(vin) != 17 {
@@ -88,7 +88,7 @@ func GetClosestVinsNotFitForCheckRuleFrom(vin string, num int) []string {
 	return vins
 }
 
-//获得最为接近的相关序列号
+// 获得最为接近的相关序列号
 func getClosestSerialNumbersFrom(cur_serial_number, cur_serial_number_begin, cur_serial_number_end, num int) []int {
 	result := make([]int, 0, num)
 	m, n := cur_serial_number, cur_serial_number
@@ -126,15 +126,15 @@ func getOneVinFrom(vin8, year_code, factory_code, vin_last_6 string) string {
 	return ""
 }
 
-//生成最后6位
+// 生成最后6位
 func get_vin_last_6_from(x string, cur_serial_number int) string {
 	//log.Println(x, cur_serial_number)
 	s := strconv.Itoa(cur_serial_number)
 	return x + strings.Repeat("0", 6-len(s)-len(x)) + s
 }
 
-//把最后6位拆分成两个部分，0x8765 ==> "0x" 8765 0 9999
-//9876544 ==> "" 9876544 0 999999
+// 把最后6位拆分成两个部分，0x8765 ==> "0x" 8765 0 9999
+// 9876544 ==> "" 9876544 0 999999
 func split_vin_last_6(vin_last_6 string) (x string, cur_serial_number, serial_number_begin, serial_number_end int, err error) {
 	//前6位
 	n, err := strconv.Atoi(vin_last_6)
